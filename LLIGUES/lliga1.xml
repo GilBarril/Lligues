@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<lliga1>
+	<Equip id="1">
+		<Nom_Equip nom="madrid">
+			<Punts punts="0" />
+			<Partits_Guanyats partits_guanyats="0" />
+			<Partits_Empatats partits_empatats="0" />
+			<Partits_Perduts partits_perduts="1" />
+		</Nom_Equip>
+	</Equip>
+	<Equip id="2">
+		<Nom_Equip nom="barça">
+			<Punts punts="3" />
+			<Partits_Guanyats partits_guanyats="1" />
+			<Partits_Empatats partits_empatats="0" />
+			<Partits_Perduts partits_perduts="0" />
+		</Nom_Equip>
+	</Equip>
+</lliga1>
