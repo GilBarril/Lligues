@@ -24,7 +24,7 @@ public class Llegirxml extends DefaultHandler {
 	int comparador = 0;
 	String score = "";
 	Equip equip;
-	int contaetiqueta=0;
+	int contaetiqueta = 0;
 	private Lliga lligueta = new Lliga(" ");
 	Map<String, Equip> Mapequips = new HashMap<String, Equip>();
 	private JTable table = new JTable(new DefaultTableModel(new Object[] {
@@ -41,7 +41,7 @@ public class Llegirxml extends DefaultHandler {
 					rows.partitsguanyats, rows.partitsempatats,
 					rows.partitsperduts });
 		}
-		
+
 		table.setModel(model3);
 
 	}
@@ -49,50 +49,46 @@ public class Llegirxml extends DefaultHandler {
 	public void startElement(String uri, String localName, String qName,
 			Attributes attributes) {
 
-		
-		if(contaetiqueta==0){
+		if (contaetiqueta == 0) {
 			lligueta.setNom(qName);
 			contaetiqueta++;
 		}
-				
-				
+
 		if (qName.equals("Nom_Equip")) {
 
 			String nom = attributes.getValue("nom");
 
-			
-				equip = new Equip(nom);
+			equip = new Equip(nom);
 		}
 		if (equip != null) {
-			
-				if (qName.equals("Punts")) {
 
-					int punts = Integer.parseInt(attributes.getValue("punts"));
-				 
-					equip.setPuntuacio(punts);
-				 
-				}
+			if (qName.equals("Punts")) {
 
-				if (qName.equals("Partits_Guanyats")) {
-					int pg = Integer.parseInt(attributes
-							.getValue("partits_guanyats"));
-					equip.setPartitsguanyats(pg);
-				}
-				if (qName.equals("Partits_Empatats")) {
-					int pe = Integer.parseInt(attributes
-							.getValue("partits_empatats"));
-					equip.setPartitsempatats(pe);
-				}
-				if (qName.equals("Partits_Perduts")) {
-					int pp = Integer.parseInt(attributes
-							.getValue("partits_perduts"));
-					equip.setPartitsperduts(pp);
-				}
-				Mapequips.put(equip.getNom(), equip);
-				
+				int punts = Integer.parseInt(attributes.getValue("punts"));
+
+				equip.setPuntuacio(punts);
+
 			}
+
+			if (qName.equals("Partits_Guanyats")) {
+				int pg = Integer.parseInt(attributes
+						.getValue("partits_guanyats"));
+				equip.setPartitsguanyats(pg);
+			}
+			if (qName.equals("Partits_Empatats")) {
+				int pe = Integer.parseInt(attributes
+						.getValue("partits_empatats"));
+				equip.setPartitsempatats(pe);
+			}
+			if (qName.equals("Partits_Perduts")) {
+				int pp = Integer.parseInt(attributes
+						.getValue("partits_perduts"));
+				equip.setPartitsperduts(pp);
+			}
+			Mapequips.put(equip.getNom(), equip);
+
 		}
-	
+	}
 
 	public Lliga getLligueta() {
 		return lligueta;

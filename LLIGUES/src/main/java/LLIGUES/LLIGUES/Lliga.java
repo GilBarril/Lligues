@@ -4,13 +4,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-
-
 public class Lliga {
 
 	String nom;
-	Map<String, Equip> Mapequips = new HashMap<String,Equip>();
-	
+	Map<String, Equip> Mapequips = new HashMap<String, Equip>();
+
 	public Lliga(String nomlliga) {
 		nom = nomlliga;
 	}
@@ -31,9 +29,4 @@ public class Lliga {
 		this.nom = nom;
 	}
 
-	
-
-	
-	
-	
 }

@@ -7,16 +7,16 @@ public class Equip {
 	int partitsguanyats;
 	int partitsperduts;
 	int partitsempatats;
-	
-    public Equip(String n){
-     
-    	nom = n;
-    	puntuacio = 0;
-    	partitsguanyats = 0;
-    	partitsperduts = 0;
-    	partitsempatats = 0;   	
-    	
-    }
+
+	public Equip(String n) {
+
+		nom = n;
+		puntuacio = 0;
+		partitsguanyats = 0;
+		partitsperduts = 0;
+		partitsempatats = 0;
+
+	}
 
 	@Override
 	public String toString() {
